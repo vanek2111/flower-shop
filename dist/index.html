@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#315638">
+  <meta name="description" content="Стебель — учебный магазин цветов. Выберите букет, добавьте открытку и соберите пробный заказ.">
+  <title>Стебель — цветы к месту</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#catalog">Перейти к букетам</a>
+  <div class="notice"><span>Учебный магазин — заказы и оплата демонстрационные</span><span class="notice-right">Цветы. Ничего лишнего.</span></div>
+  <header class="header wrap">
+    <a class="logo" href="#" aria-label="Стебель, на главную">стебель<span class="logo-mark" aria-hidden="true">✳</span></a>
+    <nav aria-label="Основная навигация"><a href="#catalog">Букеты</a><a href="#approach">О мастерской</a><a href="#delivery">Доставка и уход</a></nav>
+    <button class="cart-trigger" id="open-cart" aria-haspopup="dialog">Корзина <span id="cart-count">0</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z M8 8V6a4 4 0 0 1 8 0v2"/></svg></button>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow">ЦВЕТОЧНАЯ МАСТЕРСКАЯ</p><h1 id="hero-title">Цветы<br>к месту<span class="period">.</span></h1><p class="hero-description">На день рождения. На кухонный стол.<br>И когда просто хочется порадовать.</p><a class="button primary" href="#catalog">Выбрать букет <span aria-hidden="true">↗</span></a><div class="hero-foot"><span class="tiny-flower" aria-hidden="true">✳</span><span>Сезонные цветы.<br>Свободная форма. Живой характер.</span></div></div>
+      <div class="hero-visual"><div class="flower-image image-0 hero-photo" role="img" aria-label="Букет розовых и бордовых пионов с зеленью"></div><div class="photo-caption"><div><span class="eyebrow">В ФОКУСЕ</span><p>Пионы, как они есть</p></div><button class="text-button" data-product="peony">Смотреть букет <span aria-hidden="true">↗</span></button></div><span class="side-note" aria-hidden="true">STEBEL / FLOWER STUDY — 01</span></div>
+    </section>
+    <section class="catalog wrap" id="catalog" aria-labelledby="catalog-title">
+      <div class="section-heading"><div><p class="eyebrow">ВЫБИРАЙТЕ ПО НАСТРОЕНИЮ</p><h2 id="catalog-title">Тот самый букет</h2></div><p class="section-aside">Четыре характера.<br>Каждый — со своим цветом.</p></div>
+      <div class="catalog-toolbar"><div class="filters" role="group" aria-label="Фильтр букетов"><button class="filter active" data-filter="all" aria-pressed="true">Все букеты <span>4</span></button><button class="filter" data-filter="mono" aria-pressed="false">Монобукеты</button><button class="filter" data-filter="mix" aria-pressed="false">Сборные</button><button class="filter" data-filter="budget" aria-pressed="false">До 4 000 ₽</button></div><label class="sort-label">Порядок <select id="sort"><option value="default">По умолчанию</option><option value="asc">Сначала дешевле</option><option value="desc">Сначала дороже</option></select></label></div>
+      <div id="product-grid" class="product-grid" aria-live="polite"></div>
+      <p class="catalog-note">Фотографии и составы созданы для учебного проекта. Реальных товаров в продаже нет.</p>
+    </section>
+    <section class="approach wrap" id="approach"><div class="approach-label"><span class="large-flower" aria-hidden="true">✳</span><p class="eyebrow">ПОДХОД СТЕБЛЯ</p></div><div class="approach-copy"><h2>Пусть цветы<br>остаются цветами.</h2><p>Немного воздуха между стеблями, естественные оттенки и простая упаковка. Нам нравятся букеты, в которых можно рассмотреть каждый цветок.</p><p>В этой учебной мастерской мы пробуем именно такой подход: понятный состав, открытая цена и внимание к деталям.</p></div></section>
+    <section class="info wrap" id="delivery"><div class="section-heading"><div><p class="eyebrow">ПЕРЕД ЗАКАЗОМ</p><h2>Пара важных вещей</h2></div></div><div class="info-columns"><article><span class="info-number">01 / ДОСТАВКА</span><h3>Сначала — пробный заказ</h3><p>Сейчас магазин работает как демо. Можно собрать корзину и пройти оформление. Курьер не приедет, деньги не спишутся.</p></article><article><span class="info-number">02 / ОТКРЫТКА</span><h3>Добавьте свои слова</h3><p>В корзине можно написать короткое послание к букету. Оно сохранится на этом устройстве вместе с пробным заказом.</p></article><article><span class="info-number">03 / УХОД</span><h3>Свежая вода каждый день</h3><p>Подрежьте стебли, уберите листья ниже уровня воды. Поставьте букет подальше от батареи, прямого солнца и фруктов.</p></article></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-top"><a class="logo" href="#">стебель<span class="logo-mark" aria-hidden="true">✳</span></a><p>Цветы к месту.</p><a href="#catalog">К букетам ↑</a></div><div class="wrap footer-bottom"><span>© Стебель, 2026 · Учебный проект</span><span>Дизайн и разработка — <a href="https://vanekdev.ru/" target="_blank" rel="noopener">Иван ↗</a></span></div></footer>
+  <dialog id="product-dialog" class="product-dialog"><button class="close" data-close="product-dialog" aria-label="Закрыть букет">×</button><div id="product-detail"></div></dialog>
+  <dialog id="cart-dialog" class="cart-dialog"><div class="drawer-heading"><div><p class="eyebrow">ВАШ ВЫБОР</p><h2>Корзина</h2></div><button class="close" data-close="cart-dialog" aria-label="Закрыть корзину">×</button></div><div id="cart-content"></div></dialog>
+  <div id="toast" role="status" class="toast"></div>
+</body>
+</html>
